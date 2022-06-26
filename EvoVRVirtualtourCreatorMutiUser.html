@@ -15,9 +15,8 @@
             var vScr= GetExID();
             opener.onclick = function(){             
                 edtorDiv = document.createElement("div");  
-				edtorDiv.setAttribute("style",vScr);
-                var ifrm = document.createElement("iframe");
-                ifrm.setAttribute("src", "https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+GetExID()+",en");
+				  var ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src",vScr);
                 ifrm.setAttribute("style", "width:100%;height:100%;border:0;");
 				ifrm.setAttribute("allow", "microphone");                
                 edtorDiv.appendChild(ifrm);  
@@ -47,7 +46,7 @@
         var ExId;
         var d =new Date();
       ExId=(d.getFullYear()).toString+"/"+(d.getMonth() + 1).toString+"/"+(d.getDate()).toString+" "+(d.getHours()).toString+":"+(d.getMinutes()).toString+":"+(d.getMinutes()).toString;
-  ScrStr="https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+ExId+",en"
+  ScrStr="https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+ExId+",en";
         return ScrStr;
         
     }
