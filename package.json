@@ -1,0 +1,15 @@
+{
+  "name": "webook",
+  "version": "1.0.0",
+  "description": "Create play and edit a Vrtural",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "WebVr360"
+  },
+  "author": "NP Onji",
+  "license": "ISC"
+}

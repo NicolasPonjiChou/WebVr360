@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EvoVR Virtual Tour Creator:Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<button id="opener" style="cursor:pointer">Open Tour Creator</button>
+<script>
+
+            var opener = document.getElementById('opener');
+			var edtorDiv;
+            opener.onclick = function(){             
+                edtorDiv = document.createElement("div");  
+				edtorDiv.setAttribute("style", "position: fixed;left:0;top:0;width:100%;height:100%;z-index:9999;overflow:hidden;");
+                var ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src", "https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+GetExID("sZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG")+",en");
+                ifrm.setAttribute("style", "width:100%;height:100%;border:0;");
+				ifrm.setAttribute("allow", "microphone");                
+                edtorDiv.appendChild(ifrm);  
+                document.body.appendChild(edtorDiv); 
+				document.body.setAttribute("style", "overflow: hidden");
+            }
+			
+			if ( window.addEventListener ) {
+				window.addEventListener('message', handleClose, false);
+			} else if ( window.attachEvent ) { // ie8
+				window.attachEvent('onmessage', handleClose);
+			}
+	
+			function handleClose(e){   
+				if(  e.data=="evr_editor_closed" && edtorDiv ){
+					edtorDiv.remove();
+					document.body.removeAttribute("style", "overflow: hidden");
+				}
+			}
+
+</script>
+</body>
+</html>
+<script>
+  function GetExID(ID)
+    {
+      var ExId=hash("sha256", ID);  
+        return ExId;
+    }
+</script>    
+
