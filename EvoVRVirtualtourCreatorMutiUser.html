@@ -12,9 +12,10 @@
 
             var opener = document.getElementById('opener');
 			var edtorDiv;
+            var vScr= GetExID();
             opener.onclick = function(){             
                 edtorDiv = document.createElement("div");  
-				edtorDiv.setAttribute("style", "position: fixed;left:0;top:0;width:100%;height:100%;z-index:9999;overflow:hidden;");
+				edtorDiv.setAttribute("style",vScr);
                 var ifrm = document.createElement("iframe");
                 ifrm.setAttribute("src", "https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+GetExID()+",en");
                 ifrm.setAttribute("style", "width:100%;height:100%;border:0;");
@@ -42,37 +43,13 @@
 </html>
 <script>
   function GetExID()
-    {
+    {   var ScrStr;
         var ExId;
         var d =new Date();
       ExId=(d.getFullYear()).toString+"/"+(d.getMonth() + 1).toString+"/"+(d.getDate()).toString+" "+(d.getHours()).toString+":"+(d.getMinutes()).toString+":"+(d.getMinutes()).toString;
-return ExId
+  ScrStr="https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+ExId+",en"
+        return ScrStr;
+        
     }
 </script>    
 
-<script>
-const d = new Date();
-document.getElementById("demo").innerHTML = d.getFullYear();
-</script>
-<script>
-const d = new Date();
-document.getElementById("demo").innerHTML = d.getMonth() + 1;
-</script>
-<script>
-const d = new Date();
-document.getElementById("demo").innerHTML = d.getDate();
-</script>
-<script>
-const d = new Date();
-document.getElementById("demo").innerHTML = d.getHours();
-</script>
-<script>
-const d = new Date();
-document.getElementById("demo").innerHTML = d.getMinutes();
-</script>
-<script>
-const d = new Date();
-document.getElementById("demo").innerHTML = d.getSeconds();
-</script> 
-<script src = "https://webobook.com/asset/af:_mtaav2CjkbIV7GG3YvH6LgpnHLE9oSGt2qO4jaz"></script>
-<script src = "https://webobook.com/api/asset/u:_mtaav2CjkbIV7GG3YvH6LgpnHLE9oSGt2qO4jaz,06/26/2022 05:09:55 am,en"></script> 
