@@ -12,11 +12,13 @@
 
             var opener = document.getElementById('opener');
 			var edtorDiv;
+            var ExId;
+            var d =new Date();
+ 
             opener.onclick = function(){             
                 edtorDiv = document.createElement("div");  
-				edtorDiv.setAttribute("style", "position: fixed;left:0;top:0;width:100%;height:100%;z-index:9999;overflow:hidden;");
-                var ifrm = document.createElement("iframe");
-                ifrm.setAttribute("src", "https://webobook.com/api/asset/i:10491,ZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG,"+GetExID("sZqPKw0aDIxlDJ4fcRHQA1h_nOf30JOEE_U1tYswG")+",en");
+				  var ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src","https://webobook.com/api/asset/i:10491,r1O8n2N30ABgTwPsA2B1mpEywDzqCtUWc-9kUQ9C,06/26/2022 04:06:12 am,en");
                 ifrm.setAttribute("style", "width:100%;height:100%;border:0;");
 				ifrm.setAttribute("allow", "microphone");                
                 edtorDiv.appendChild(ifrm);  
@@ -40,12 +42,5 @@
 </script>
 </body>
 </html>
-<script>
-  function GetExID(ID)
-    {
-      var ExId;
-        ExId=hash("sha256", ID);  
-        return ExId;
-    }
-</script>    
-
+2022/06/12 5:25:05
+06/26/2022 12:06:12 pm
